@@ -1,6 +1,7 @@
 module "alb" {
   providers = { aws.cluster = aws.cluster, aws.route53 = aws.route53 }
-  source    = "github.com/thoughtbot/terraform-alb-ingress?ref=131b6f8"
+  source    = "github.com/frontrowhealth/terraform-alb-ingress?ref=current"
+  # local source "../../../terraform-alb-ingress"
 
   alarm_actions             = var.alarm_actions
   alarm_evaluation_minutes  = var.alarm_evaluation_minutes
